@@ -1,0 +1,41 @@
+void swapAlternate(int *arr, int size)
+{
+    int i,temp;
+    if(size%2==0){
+         for(i=0;i<size;i++)
+    {
+        if(i%2==0)//for swapping of alternate elements only
+        {
+    	 temp=arr[i];
+        arr[i]=arr[i+1];
+        arr[i+1]=temp;
+        }
+    } 
+    }
+    else
+         for(i=0;i<size-1;i++)
+    {
+        if(i%2==0)
+        {
+    	 temp=arr[i];
+        arr[i]=arr[i+1];
+        arr[i+1]=temp;
+        }
+    }  
+}
+
+//EASY SOLUTION
+void swapAlternate(int arr[],int size){
+	
+    int i = 0;
+    int j = i + 1;
+    
+    while(j < size){
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+        
+        i = i + 2;
+        j = i + 1;
+    }
+}
