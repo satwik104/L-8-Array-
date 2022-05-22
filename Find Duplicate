@@ -1,0 +1,16 @@
+int duplicateNumber(int *arr, int size)
+{
+    //time complexity is O(n)
+    int n = size;
+    int sum=0;
+    for(int i=0; i<n; i++)
+    {
+        sum = sum + arr[i];
+    }
+    //now take out the sum  of first n-2 numbers
+    int newsum = 0;
+    newsum = ((n-1)*(n-2))/2;
+    //now substract sum from new sum....to get the number
+    int ans = sum - newsum;
+    return ans;
+}
