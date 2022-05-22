@@ -1,0 +1,11 @@
+void sortZeroesAndOne(int *input, int size)
+{
+    int i,count=0;
+    for(i=0;i<size;i++)//counting the no. of zeros
+        if(input[i]==0)
+            count++;
+    for(i=0;i<count;i++)//putting zeros first
+        input[i]=0;
+    for(i=count;i<size;i++)//now putting 1 in remaining space
+        input[i]=1;
+} 
