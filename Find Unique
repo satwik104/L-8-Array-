@@ -1,0 +1,30 @@
+int findUnique(int * arr, int size){
+    int i=0,j=0;
+        for(i=0;i<size;i++)
+        {
+            bool found = false;
+            for(j=0; j<size ;j++)
+            {
+                if(arr[i]==arr[j] && j!=i)
+                {
+                    found  = true;
+                    break;
+                }
+            }
+            if(found == false)
+                return arr[i];
+        }
+}
+/*
+int findUnique(int *arr, int n) {
+    // we do this with xor operator for better time complexity
+    //xor operator club same numbers to 0 and,
+    //on doing with zero returns the no.
+    //eg- 2^2 = 0 and 2^0 = 2 and 2^3^2 = 3^0 = 3
+    //IT GIVES BETTER TIME COMPLEXITY
+    int ans = arr[0];
+    for(int i=1; i<n; i++)
+        ans = ans ^ arr[i];
+    return ans;
+}
+*/
