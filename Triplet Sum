@@ -1,0 +1,14 @@
+int tripletSum(int *input, int size, int x)
+{
+	int i,j,k,ans=0;
+    for(i=0;i<size-2;i++)
+    {
+        for(j=i+1;j<size-1;j++)
+        {
+            for(k=j+1;k<size;k++)
+                if(input[i]+input[j]+input[k]==x)
+                    ans++;
+        }
+    }
+    return ans;
+}
